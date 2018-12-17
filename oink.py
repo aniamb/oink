@@ -1,16 +1,29 @@
 
-input = raw_input("Enter a word: ")
-type(input)
+choice = input("For English to Pig Latin, Enter 1. For Pig Latin to English, Press 2: \n")
+type(choice)
 
-words = input.split(" ")
+if choice == 1:
+    input = raw_input("Enter English: ")
+    type(input)
 
-print "Pig Latin Translation: "
+    words = input.split(" ")
 
-for x in words:
-    first = x[1:]
-    second = x[0:1]
-    third = "ay"
+    print "Pig Latin Translation: "
 
-    pigLatin = first+second+third
+    for x in words:
+        first = x[1:]
+        second = x[0:1]
+        third = "ay"
 
-    print pigLatin
+        pigLatin = first+second+third
+
+        print pigLatin
+elif choice == 2:
+    pInput = raw_input("Enter Pig Latin: ")
+    type(pInput)
+
+    pWords = pInput.split(" ")
+    print pInput
+    print pInput[:-2]
+else:
+    print("Invalid input")

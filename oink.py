@@ -1,11 +1,16 @@
+
 input = raw_input("Enter a word: ")
 type(input)
 
-first = input[1:]
+words = input.split(" ")
 
-second = input[0:1]
+print "Pig Latin Translation: "
 
-third = "ay"
+for x in words:
+    first = x[1:]
+    second = x[0:1]
+    third = "ay"
 
-pigLatin = first+second+third
-print "Pig Latin Translation: " + pigLatin
+    pigLatin = first+second+third
+
+    print pigLatin

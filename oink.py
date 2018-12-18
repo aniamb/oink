@@ -1,9 +1,9 @@
 continuation = 1
 while (continuation == 1):
     choice = input("For English to Pig Latin, Enter 1. For Pig Latin to English, Press 2: \n")
-    type(choice)
+    actualChoice = int(choice)
 
-    if choice == 1:
+    if actualChoice == 1:
         input = raw_input("Enter English: ")
         type(input)
 
@@ -22,17 +22,18 @@ while (continuation == 1):
 
         keepGoing = raw_input("Would you like to translate another word? Enter Y or N: \n")
         type(keepGoing)
+        keepGoing.upper()
 
-        if keepGoing == "Y":
+        if keepGoing == 'Y' or keepGoing == 'y':
             continuation = 1
         else:
             continuation = 2
 
-    elif choice == 2:
+    elif actualChoice == 2:
         pInput = raw_input("Enter Pig Latin: ")
         type(pInput)
 
-        print "Pig Latin Translation: "
+        print "English Translation: "
         pWords = pInput.split(" ")
         for y in pWords:
             sansAY = y[:-2]
@@ -42,10 +43,13 @@ while (continuation == 1):
 
         keepGoing = raw_input("Would you like to translate another word? Enter Y or N: \n")
         type(keepGoing)
+        keepGoing.upper()
 
-        if keepGoing == "Y":
+        if keepGoing == 'Y' or keepGoing == 'y':
             continuation = 1
         else:
             continuation = 2
     else:
         print("Invalid input")
+
+print "Thanks for Translating."

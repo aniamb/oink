@@ -22,8 +22,12 @@ elif choice == 2:
     pInput = raw_input("Enter Pig Latin: ")
     type(pInput)
 
+    print "Pig Latin Translation: "
     pWords = pInput.split(" ")
-    print pInput
-    print pInput[:-2]
+    for y in pWords:
+        sansAY = y[:-2]
+        firstLetter = sansAY[-1:]
+        secondHalf = sansAY[:-1]
+        print firstLetter+secondHalf
 else:
     print("Invalid input")

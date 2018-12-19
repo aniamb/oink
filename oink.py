@@ -18,8 +18,9 @@ while (continuation == 1):
 
             pigLatin = first+second+third
 
-            print pigLatin
+            print (pigLatin),
 
+        print ""
         keepGoing = raw_input("Would you like to translate another word? Enter Y or N: \n")
         type(keepGoing)
         keepGoing.upper()
@@ -39,8 +40,9 @@ while (continuation == 1):
             sansAY = y[:-2]
             firstLetter = sansAY[-1:]
             secondHalf = sansAY[:-1]
-            print firstLetter+secondHalf
+            print (firstLetter+secondHalf),
 
+        print ""
         keepGoing = raw_input("Would you like to translate another word? Enter Y or N: \n")
         type(keepGoing)
         keepGoing.upper()

@@ -1,6 +1,6 @@
 continuation = 1
 while (continuation == 1):
-    choice = input("For English to Pig Latin, Enter 1. For Pig Latin to English, Press 2: \n")
+    choice = raw_input("For English to Pig Latin, Enter 1. For Pig Latin to English, Press 2: \n")
     actualChoice = int(choice)
 
     if actualChoice == 1:
